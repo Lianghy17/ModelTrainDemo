@@ -156,8 +156,7 @@ class Predictor:
 
         return discrete_feature_dims, continuous_features
 
-    def predict_single(self,
-                       : Union[str, Dict[str, Any]]) -> float:
+    def predict_single(self, features_json: Union[str, Dict[str, Any]]) -> float:
         """
         单条推理
 
