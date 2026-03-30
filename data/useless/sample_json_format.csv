@@ -1,0 +1,6 @@
+id,features,label
+1,"{""user_id"": 1001, ""item_id"": 2001, ""age"": 25, ""income"": 50000, ""cate_id"": ""101"", ""brand"": ""BrandA"", ""gender"": ""M""}",1
+2,"{""user_id"": 1002, ""item_id"": 2002, ""age"": 30, ""income"": 60000, ""cate_id"": ""102"", ""brand"": ""BrandB"", ""gender"": ""F""}",0
+3,"{""user_id"": 1003, ""item_id"": 2003, ""age"": 35, ""income"": 75000, ""cate_id"": ""101"", ""brand"": ""BrandC"", ""gender"": ""M""}",1
+4,"{""user_id"": 1004, ""item_id"": 2004, ""age"": 28, ""income"": 55000, ""cate_id"": ""103"", ""brand"": ""BrandA"", ""gender"": ""F""}",0
+5,"{""user_id"": 1005, ""item_id"": 2005, ""age"": 42, ""income"": 80000, ""cate_id"": ""102"", ""brand"": ""BrandD"", ""gender"": ""M""}",1

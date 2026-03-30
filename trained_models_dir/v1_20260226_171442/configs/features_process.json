@@ -1,0 +1,47 @@
+
+{
+    "user_id": {
+        "field": "user",
+        "type": "id",
+        "processor": "hash_bucket",
+        "bucket_size": 10000
+    },
+    "item_id": {
+        "field": "item",
+        "type": "id",
+        "processor": "hash_bucket",
+        "bucket_size": 5000
+    },
+    "age": {
+        "field": "user",
+        "type": "continuous",
+        "processor": "minmax",
+        "min": 18,
+        "max": 65
+    },
+    "income": {
+        "field": "user",
+        "type": "continuous",
+        "processor": "zscore",
+        "mean": 65000,
+        "std": 15000
+    },
+    "cate_id": {
+        "field": "item",
+        "type": "categorical",
+        "processor": "vocab",
+        "vocab_list": ["101", "102", "103"]
+    },
+    "brand": {
+        "field": "item",
+        "type": "categorical",
+        "processor": "vocab",
+        "vocab_list": ["BrandA", "BrandB", "BrandC", "BrandD"]
+    },
+    "gender": {
+        "field": "user",
+        "type": "categorical",
+        "processor": "vocab",
+        "vocab_list": ["M", "F"]
+    }
+}

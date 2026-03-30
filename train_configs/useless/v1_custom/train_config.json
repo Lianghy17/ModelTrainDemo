@@ -1,0 +1,39 @@
+{
+  "model_config": {
+    "model_name": "DeepFM",
+    "embedding_dim": 8,
+    "hidden_units": [64, 32, 16],
+    "dropout_rate": 0.2
+  },
+  "training_config": {
+    "epochs": 5,
+    "batch_size": 32,
+    "learning_rate": 0.001,
+    "device": "cpu",
+    "optimizer": "adam",
+    "loss_function": "bce_loss"
+  },
+  "task_config": {
+    "task_type": "binary_classification",
+    "metrics": ["auc", "logloss"],
+    "data_paths": {
+      "train": "./data/train.csv",
+      "validation": "./data/validation.csv",
+      "test": "./data/test.csv"
+    },
+    "data_columns": {
+      "id": "sample_id",
+      "features": "feature_json",
+      "label": "target"
+    },
+    "early_stopping": {
+      "patience": 3,
+      "metric": "auc",
+      "mode": "max"
+    },
+    "model_save": {
+      "save_best_only": false,
+      "save_frequency": 1
+    }
+  }
+}

@@ -1,0 +1,4 @@
+sample_id,feature_json,target
+1001,"{""user_id"": 1001, ""item_id"": 2001, ""age"": 25, ""income"": 50000, ""cate_id"": ""101"", ""brand"": ""BrandA"", ""gender"": ""M""}",1
+1002,"{""user_id"": 1002, ""item_id"": 2002, ""age"": 30, ""income"": 60000, ""cate_id"": ""102"", ""brand"": ""BrandB"", ""gender"": ""F""}",0
+1003,"{""user_id"": 1003, ""item_id"": 2003, ""age"": 35, ""income"": 75000, ""cate_id"": ""101"", ""brand"": ""BrandC"", ""gender"": ""M""}",1

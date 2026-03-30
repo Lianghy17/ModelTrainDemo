@@ -1,0 +1,8 @@
+{
+  "config_name": "v1",
+  "timestamp": "20260226_172330",
+  "model_name": "DeepFM",
+  "epochs": 5,
+  "batch_size": 1024,
+  "learning_rate": 0.001
+}

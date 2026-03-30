@@ -1,0 +1,122 @@
+{
+  "processors": {
+    "user_id": {
+      "type": "hash_bucket",
+      "bucket_size": 10000,
+      "feature_name": "user_id"
+    },
+    "item_id": {
+      "type": "hash_bucket",
+      "bucket_size": 5000,
+      "feature_name": "item_id"
+    },
+    "age": {
+      "type": "minmax_scaler",
+      "min_": 18.0,
+      "max_": 65.0,
+      "scale_": 0.02127659574468085
+    },
+    "income": {
+      "type": "standard_scaler",
+      "mean_": 65000.0,
+      "scale_": 15000.0,
+      "var_": 225000000.0
+    },
+    "cate_id": {
+      "type": "vocab",
+      "vocab_size": 3
+    },
+    "brand": {
+      "type": "vocab",
+      "vocab_size": 4
+    },
+    "gender": {
+      "type": "vocab",
+      "vocab_size": 2
+    }
+  },
+  "vocab_maps": {
+    "cate_id": {
+      "101": 0,
+      "102": 1,
+      "103": 2
+    },
+    "brand": {
+      "BrandA": 0,
+      "BrandB": 1,
+      "BrandC": 2,
+      "BrandD": 3
+    },
+    "gender": {
+      "M": 0,
+      "F": 1
+    }
+  },
+  "feature_config": {
+    "user_id": {
+      "field": "user",
+      "type": "id",
+      "processor": "hash_bucket",
+      "bucket_size": 10000
+    },
+    "item_id": {
+      "field": "item",
+      "type": "id",
+      "processor": "hash_bucket",
+      "bucket_size": 5000
+    },
+    "age": {
+      "field": "user",
+      "type": "continuous",
+      "processor": "minmax",
+      "min": 18,
+      "max": 65
+    },
+    "income": {
+      "field": "user",
+      "type": "continuous",
+      "processor": "zscore",
+      "mean": 65000,
+      "std": 15000
+    },
+    "cate_id": {
+      "field": "item",
+      "type": "categorical",
+      "processor": "vocab",
+      "vocab_list": [
+        "101",
+        "102",
+        "103"
+      ]
+    },
+    "brand": {
+      "field": "item",
+      "type": "categorical",
+      "processor": "vocab",
+      "vocab_list": [
+        "BrandA",
+        "BrandB",
+        "BrandC",
+        "BrandD"
+      ]
+    },
+    "gender": {
+      "field": "user",
+      "type": "categorical",
+      "processor": "vocab",
+      "vocab_list": [
+        "M",
+        "F"
+      ]
+    }
+  },
+  "fitted_features": [
+    "age",
+    "user_id",
+    "gender",
+    "item_id",
+    "brand",
+    "income",
+    "cate_id"
+  ]
+}
